@@ -1,5 +1,5 @@
 import math
-
+import time
 def getInput():
     a = input("Enter a \n")
     b = input("Enter b \n")
@@ -21,9 +21,13 @@ def calcEquation1(nums, D):
     upper2 = -1 * nums[1] - math.sqrt(D)
     lower = 2 * nums[0]
     results = [None, None]#instantiating list
-    results[0] = upper1 / lower#geting x1 and x2
+    results[0] = upper1 / lower#geting x1 and x21
     results[1] = upper2 / lower
     return results
+
 numbers = getInput()#geting input
+startTime = time.time()
 dis = calculateDiscriminant(numbers)
 print(calcEquation1(numbers, dis))#results
+endtime = time.time()
+print(f"Time taken {endtime - startTime} seconds")
