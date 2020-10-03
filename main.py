@@ -28,6 +28,7 @@ def calcEquation1(nums, D):
 numbers = getInput()#geting input
 startTime = time.time()
 dis = calculateDiscriminant(numbers)
-print(calcEquation1(numbers, dis))#results
+result = calcEquation1(numbers, dis)#printing results
+print(f"x1 = {result[0]}\nx2 = {result[1]}")
 endtime = time.time()
 print(f"Time taken {endtime - startTime} seconds")
