@@ -1,7 +1,7 @@
 import math
 import time
-def calculateNormalEquation()
-    def getInput():
+def calculateNormalEquation():
+    def getInput_3():
         a = input("Enter a \n")
         b = input("Enter b \n")
         c = input("Enter c \n")
@@ -26,10 +26,24 @@ def calculateNormalEquation()
         results[1] = upper2 / lower
         return results
 
-    numbers = getInput()#geting input
+    numbers = getInput_3()#geting input
     startTime = time.time()
     dis = calculateDiscriminant(numbers)
     result = calcEquation1(numbers, dis)#printing results
     print(f"x1 = {result[0]}\nx2 = {result[1]}")
     endtime = time.time()
     print(f"Time taken aproximately {endtime - startTime} seconds")
+
+def getInput_2():
+    a = input("Enter a \n")
+    b = input("Enter b \n")
+    arr = [None, None, None]#instanttiating a list
+    arr[0] = int(a)#adding inputed nbumbers to the liost for later calculations
+    arr[1] = int(b)
+    return arr
+def calculateResult(nums):
+    result = [0, None]
+    temp = (nums[1] / nums[0])  * -1
+    result[1] = temp
+    return result
+    
