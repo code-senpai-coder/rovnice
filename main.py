@@ -14,25 +14,18 @@ def calculateNormalEquation():
         D = (nums[1] * nums[1]) - 4 * nums[0] * nums[2]#calculating discriminant from entered nums
         #checking if dis is lower than zero
         if D < 0:
-            return "cannot be calced"
+           print("cannot be calced")
         elif D >= 0:
-            return int(D)
-    def calcEquation1(nums, D):
-        upper1 = -1 * nums[1] + math.sqrt(D)#calculating uper for + - and then lower 
-        upper2 = -1 * nums[1] - math.sqrt(D)
-        lower = 2 * nums[0]
-        results = [None, None]#instantiating list
-        results[0] = upper1 / lower#geting x1 and x21
-        results[1] = upper2 / lower
-        return results
-
+            upper1 = -1 * nums[1] + math.sqrt(D)#calculating uper for + - and then lower 
+            upper2 = -1 * nums[1] - math.sqrt(D)
+            lower = 2 * nums[0]
+            results = [None, None]#instantiating list
+            results[0] = upper1 / lower#geting x1 and x21
+            results[1] = upper2 / lower
+            print(f"x1 = {results[0]}\nx2 = {results[1]}")
     numbers = getInput_3()#geting input
-    startTime = time.time()
-    dis = calculateDiscriminant(numbers)
-    result = calcEquation1(numbers, dis)#printing results
-    print(f"x1 = {result[0]}\nx2 = {result[1]}")
-    endtime = time.time()
-    print(f"Time taken aproximately {endtime - startTime} seconds")
+    calculateDiscriminant(numbers)
+
 def calculateEquationWithoutAb():
     def getInput_2():
         a = input("Enter a \n")
@@ -50,6 +43,23 @@ def calculateEquationWithoutAb():
     result = [None, None]
     result = calculateResult(numbers)
     print(f"x1 = {result[0]}\nx2 = {result[1]}")
+def caculatePureQuadraticEquation():
+    def getInput_3():
+        a = input("Enter a: \n")
+        c = input("Enter c: \n")
+        arr = [None, None]
+        arr[0] = int(a)
+        arr[1] = int(c)
+        return arr
+    def calculateSqrtAndResult(nums):
+        temp = -1*(nums[1]/nums[0])
+        if temp < 0 :
+            print("cannot be calced")
+        else:
+            result = [None, None]
+            result[0] = math.sqrt(temp)
+            result[1] = -1 * math.sqrt(temp)
+            print(f"x1 = {result[0]}\nx2 = {result[1]}")
+    numbers = getInput_3()
+    calculateSqrtAndResult(numbers)
 
-
-    
