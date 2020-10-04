@@ -16,8 +16,8 @@ def calculateNormalEquation():
         if D < 0:
            print("cannot be calced")
         elif D >= 0:
-            upper1 = -1 * nums[1] + math.odmocnina(D)#calculating uper for + - and then lower 
-            upper2 = -1 * nums[1] - math.odmocnina(D)
+            upper1 = -1 * nums[1] + odmocnina(D)#calculating uper for + - and then lower 
+            upper2 = -1 * nums[1] - odmocnina(D)
             lower = 2 * nums[0]
             results = [None, None]#instantiating list
             results[0] = upper1 / lower#geting x1 and x21
@@ -57,14 +57,14 @@ def caculatePureQuadraticEquation():
             print("cannot be calced")
         else:
             result = [None, None]
-            result[0] = math.odmocnina(temp)
-            result[1] = -1 * math.odmocnina(temp)
+            result[0] = odmocnina(temp)
+            result[1] = -1 * odmocnina(temp)
             print(f"x1 = {result[0]}\nx2 = {result[1]}")
     numbers = getInput_3()
     calculateSqrtAndResult(numbers)
 
 def main():
-    in_ = input("Press 1 for full quadratic equations\n Press 2 for equation without ab \n Press 3 for purely quadratic equation")
+    in_ = input("Press 1 for full quadratic equations\nPress 2 for equation without ab \nPress 3 for purely quadratic equation\n")
     #cheking inputs
     if in_ == "1":
         calculateNormalEquation()
@@ -77,3 +77,5 @@ def main():
         print("Invalid input, try again")
         main()
     main()
+#aplication start
+main()
