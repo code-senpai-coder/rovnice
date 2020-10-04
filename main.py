@@ -33,11 +33,11 @@ def calculateNormalEquation():
     print(f"x1 = {result[0]}\nx2 = {result[1]}")
     endtime = time.time()
     print(f"Time taken aproximately {endtime - startTime} seconds")
-def calculateEquationWithoutAb()
+def calculateEquationWithoutAb():
     def getInput_2():
         a = input("Enter a \n")
         b = input("Enter b \n")
-        arr = [None, None, None]#instanttiating a list
+        arr = [None, None]#instanttiating a list
         arr[0] = int(a)#adding inputed nbumbers to the liost for later calculations
         arr[1] = int(b)
         return arr
@@ -47,7 +47,9 @@ def calculateEquationWithoutAb()
         result[1] = temp
         return result
     numbers = getInput_2()
-    result[] = calculateResult(numbers)
+    result = [None, None]
+    result = calculateResult(numbers)
     print(f"x1 = {result[0]}\nx2 = {result[1]}")
+
 
     
